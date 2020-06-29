@@ -1,0 +1,69 @@
+.vdp-datepicker__calendar .cell.selected.highlighted {
+    background: #999999;
+}
+
+.vdp-datepicker__calendar .cell.highlighted {
+    background: #dedede !important;
+}
+
+.vdp-datepicker__calendar .cell.selected {
+    background: #999999 !important;
+    color: #ffffff;
+}
+
+.vdp-datepicker__calendar .cell:hover {
+    border-color: #999999 !important;
+}
+
+#nprogress .bar {
+    background: #bde7ff !important;
+}
+
+x-focus .selected {
+    color: greenyellow;
+}
+
+x-map > div {
+    width: 250px;
+    height: 250px;
+}
+
+.hidden{
+    display: none;
+}
+
+/*RATE TABLE COLUMN HEADINGS*/
+/**
+Hey Bily, this seems like a tricky but robust way to do custom labels.
+
+.label[data-content="minStay"],
+.label[data-content="rate"],
+.label[data-content="note"] {
+    visibility: hidden;
+}
+.label[data-content="minStay"]:after,
+.label[data-content="rate"]:after,
+.label[data-content="note"]:after {
+    float: left;
+    visibility: visible;
+    position: relative;
+}
+.label[data-content="note"]:after {
+    content: 'Bedrooms';
+}
+.label[data-content="minStay"]:after,
+.label[data-content="rate"]:after,
+
+.label[data-content="minStay"]:after {
+    content: 'Minimum Stay';
+}
+
+.label[data-content="rate"]:after {
+    content: 'Nightly Rate';
+}
+**/
+/*END RATE TABLE COLUMN HEADINGS*/
+
+.features{
+    text-transform: capitalize;
+}
