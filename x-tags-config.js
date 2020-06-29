@@ -59,7 +59,7 @@ const tagApp = {
     },
 
     servers: {
-        production: "https://LacureData.com",
+        production: "https://staging.LacureData.com",
         development: "http://LacureData.test"
     },
 
