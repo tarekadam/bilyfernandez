@@ -44,9 +44,20 @@
 </head>
 <body>
 
-<x-search></x-search>
-<hr/>
-<x-map></x-map>
+<table width="100%" border="1">
+    <tr>
+        <td width="50%" valign="top">
+
+            <x-search types='["villa"]'></x-search>
+            <x-map></x-map>
+
+        </td>
+        <td valign="top">
+            <x-bookables types='["villa"]'></x-bookables>
+        </td>
+    </tr>
+</table>
+
 
 <script src="//reservation-cdn.thebackoffice.io/app.js"></script>
 
