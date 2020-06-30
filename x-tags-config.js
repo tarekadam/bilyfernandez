@@ -27,7 +27,7 @@ const tagApp = {
     },
 
     map: {
-        key: 'AIzaSyDmnopY6JoZqF_E0MSGn6odXjZwSU1JZqI',
+        key: null,
         zoom: 10,
         mapType: 'terrain',
     },
