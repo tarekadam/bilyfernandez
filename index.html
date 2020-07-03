@@ -48,6 +48,7 @@
 </head>
 <body>
 <button onclick="tagApp.commands.endSession()">clear session</button>
+
 <table width="100%" border="1">
     <tr>
         <td width="50%" valign="top">
@@ -57,7 +58,11 @@
 
         </td>
         <td valign="top">
-            <x-bookables types='["villa"]'></x-bookables>
+            <x-bookables types='["villa"]'
+                         auto-load=true
+                         meta="eur,usd,bedrooms"
+                         tag-specs="div.items-container,div.item row,p.soldout|div.item-carousel,h1,h2,div.hidden&div.item-carousel,div.item-slick&div.meta,span,span&button.hidden"
+            ></x-bookables>
         </td>
     </tr>
 </table>
