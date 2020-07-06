@@ -26,11 +26,47 @@
     <link rel="stylesheet" href="lacure.css">
     <link rel="stylesheet" href="x-tags.css">
 
-    <script type="text/javascript" src="http://d1ovmfk4rp967b.cloudfront.net/wp-includes/js/jquery/jquery.js.gzip?ver=1.12.4"></script>
+    <script type="text/javascript"
+            src="http://d1ovmfk4rp967b.cloudfront.net/wp-includes/js/jquery/jquery.js.gzip?ver=1.12.4"></script>
 
     <script src="x-tags-config.js"></script>
     <script src="x-tags-event-listener.js"></script>
 
+
+    <script>
+
+        var DOMSubtreeModifiedTimers = {};
+        var DOMSubtreeModifiedCallbacks = {};
+        var DOMSubtreeModifiedDelay = 1000;
+        var microtime = function () {
+            return (Date.now());
+        }
+
+
+        jQuery(document).ready(function () {
+            jQuery('#results-area').on("DOMSubtreeModified", function () {
+
+                if (typeof DOMSubtreeModifiedCallbacks['#results-area'] == 'undefined') {
+                    DOMSubtreeModifiedTimers['#results-area'] = microtime();
+
+                    DOMSubtreeModifiedCallbacks['#results-area'] = setInterval(function () {
+                        console.log(microtime());
+                        console.log(DOMSubtreeModifiedTimers['#results-area']);
+
+                        if ((microtime() - DOMSubtreeModifiedTimers['#results-area']) >= DOMSubtreeModifiedDelay) {
+
+                            console.log('BILY - THE RESULTS HTML HAS RENDERED')
+
+                            clearInterval(DOMSubtreeModifiedCallbacks['#results-area']);
+                            delete DOMSubtreeModifiedCallbacks['#results-area'];
+                        }
+                    }, DOMSubtreeModifiedDelay)
+                }
+
+
+            })
+        });
+    </script>
 
     <style>
         .effect div {
@@ -40,7 +76,7 @@
             background-size: cover;
         }
 
-        .vue-map{
+        .vue-map {
             height: 500px;
         }
     </style>
@@ -57,7 +93,7 @@
             <x-map></x-map>
 
         </td>
-        <td valign="top">
+        <td valign="top" id="results-area">
             <x-bookables types='["villa"]'
                          auto-load=true
                          meta="eur,usd,bedrooms"
