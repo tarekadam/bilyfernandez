@@ -50,8 +50,6 @@
                     DOMSubtreeModifiedTimers['#results-area'] = microtime();
 
                     DOMSubtreeModifiedCallbacks['#results-area'] = setInterval(function () {
-                        console.log(microtime());
-                        console.log(DOMSubtreeModifiedTimers['#results-area']);
 
                         if ((microtime() - DOMSubtreeModifiedTimers['#results-area']) >= DOMSubtreeModifiedDelay) {
 
