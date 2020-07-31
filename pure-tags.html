@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pure Tags</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="//thebackoffice.github.io/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//thebackoffice.github.io//favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//thebackoffice.github.io//favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//thebackoffice.github.io//favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//thebackoffice.github.io//favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//thebackoffice.github.io//favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//thebackoffice.github.io//favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//thebackoffice.github.io//favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//thebackoffice.github.io//favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="//thebackoffice.github.io//favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//thebackoffice.github.io//favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//thebackoffice.github.io//favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//thebackoffice.github.io//favicon/favicon-16x16.png">
+    <link rel="manifest" href="//thebackoffice.github.io//favicon/manifest.json">
+
+    <link rel="stylesheet" href="x-tags.css">
+    <script src="x-tags-config.js"></script>
+    <script src="x-tags-event-listener.js"></script>
+
+
+</head>
+<body>
+
+<table width="100%" border="1">
+    <tr>
+        <td width="50%" valign="top">
+
+            <x-search types='["villa"]'></x-search>
+            <x-map></x-map>
+
+        </td>
+        <td valign="top" id="results-area">
+            <x-bookables types='["villa"]'
+                         auto-load=true
+                         meta="eur,usd,bedrooms"
+                         tag-specs="div.items-container,div.item row,p.soldout|div.item-carousel,h1,h2,div.hidden&div.item-carousel,div.item-slick&div.meta,span,span&button.hidden"
+                         class=""
+            ></x-bookables>
+        </td>
+    </tr>
+</table>
+
+
+<script src="//reservation-cdn.thebackoffice.io/app.js"></script>
+</body>
+</html>
