@@ -63,6 +63,10 @@ const tagApp = {
         development: "http://LacureData.test"
     },
 
+    scopes: {
+        available: false
+    },
+
     rendition: [null, "Marriott"][0],
     channels: ['LacureVillas.com']
 }
