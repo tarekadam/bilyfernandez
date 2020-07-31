@@ -23,10 +23,10 @@ x-focus .selected {
     color: greenyellow;
 }
 
-x-map > div {
+/*x-map > div {
     width: 250px;
     height: 250px;
-}
+}*/
 
 .hidden{
     display: none;
