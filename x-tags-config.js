@@ -30,6 +30,9 @@ const tagApp = {
         key: null,
         zoom: 10,
         mapType: 'terrain',
+        orClosest: true,
+        blurPin: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+        focusPin: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
     },
 
     format: {
