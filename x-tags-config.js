@@ -63,7 +63,7 @@ const tagApp = {
 
     servers: {
         production: "https://LacureData.com",
-        development: "http://LacureData.test"
+        development: "https://LacureData.com"
     },
 
     scopes: {
@@ -71,5 +71,5 @@ const tagApp = {
     },
 
     rendition: [null, "Marriott"][0],
-    channels: ['LacureVillas.com']
+    channels: ['LacureVillas.com'],
 }
