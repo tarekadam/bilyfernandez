@@ -67,3 +67,115 @@ Hey Bily, this seems like a tricky but robust way to do custom labels.
 .features{
     text-transform: capitalize;
 }
+
+.vdp-datepicker__calendar .cell.selected.highlighted {
+    background: #999999;
+}
+
+.vdp-datepicker__calendar .cell.highlighted {
+    background: #dedede !important;
+}
+
+.vdp-datepicker__calendar .cell.selected {
+    background: #999999 !important;
+    color: #ffffff;
+}
+
+.vdp-datepicker__calendar .cell:hover {
+    border-color: #999999 !important;
+}
+
+#nprogress .bar {
+    background: #bde7ff !important;
+}
+
+x-focus .selected {
+    color: greenyellow;
+}
+
+/*x-map > div {
+    width: 250px;
+    height: 250px;
+}*/
+
+.hidden {
+    display: none;
+}
+
+/*RATE TABLE COLUMN HEADINGS*/
+/**
+Hey Bily, this seems like a tricky but robust way to do custom labels.
+
+.label[data-content="minStay"],
+.label[data-content="rate"],
+.label[data-content="note"] {
+    visibility: hidden;
+}
+.label[data-content="minStay"]:after,
+.label[data-content="rate"]:after,
+.label[data-content="note"]:after {
+    float: left;
+    visibility: visible;
+    position: relative;
+}
+.label[data-content="note"]:after {
+    content: 'Bedrooms';
+}
+.label[data-content="minStay"]:after,
+.label[data-content="rate"]:after,
+
+.label[data-content="minStay"]:after {
+    content: 'Minimum Stay';
+}
+
+.label[data-content="rate"]:after {
+    content: 'Nightly Rate';
+}
+**/
+/*END RATE TABLE COLUMN HEADINGS*/
+
+.features {
+    text-transform: capitalize;
+}
+
+.paginate-links{
+    position: absolute;
+    top: 0;
+    right:0;
+}
+
+.paginate-links.list{
+    list-style-type: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+
+.paginate-links > li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.paginate-links > li > a {
+    cursor: pointer;
+}
+
+.paginate-links > li.active a {
+    font-weight: bold;
+}
+
+.paginate-links > li.next:before {
+    content: ' | ';
+    margin-right: 13px;
+    color: #ddd;
+}
+
+.paginate-links > li.disabled a {
+    color: #ccc;
+    cursor: no-drop;
+}
+
