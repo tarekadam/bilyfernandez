@@ -21,9 +21,9 @@ const tagApp = {
     },
 
     imageLimits: {
-        focus: 5,
+        focus: 50,
         blur: 3,
-        width: 500,
+        width: 300,
     },
 
     map: {
@@ -62,8 +62,8 @@ const tagApp = {
     },
 
     servers: {
-        production: "https://LacureData.com",
-        development: "https://LacureData.com"
+        production: "https://staging.LacureData.com",
+        development: "https://admin.LacureData.com"
     },
 
     scopes: {

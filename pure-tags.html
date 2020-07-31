@@ -1,56 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pure Tags</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="57x57" href="//thebackoffice.github.io/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="//thebackoffice.github.io//favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="//thebackoffice.github.io//favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="//thebackoffice.github.io//favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="//thebackoffice.github.io//favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="//thebackoffice.github.io//favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="//thebackoffice.github.io//favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="//thebackoffice.github.io//favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="//thebackoffice.github.io//favicon/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//thebackoffice.github.io/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//thebackoffice.github.io/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//thebackoffice.github.io/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//thebackoffice.github.io/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//thebackoffice.github.io/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//thebackoffice.github.io/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//thebackoffice.github.io/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//thebackoffice.github.io/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"
-          href="//thebackoffice.github.io//favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="//thebackoffice.github.io//favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="//thebackoffice.github.io//favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="//thebackoffice.github.io//favicon/favicon-16x16.png">
-    <link rel="manifest" href="//thebackoffice.github.io//favicon/manifest.json">
+          href="//thebackoffice.github.io/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//thebackoffice.github.io/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//thebackoffice.github.io/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//thebackoffice.github.io/favicon/favicon-16x16.png">
+    <link rel="manifest" href="//thebackoffice.github.io/favicon/manifest.json">
+
+    <title>reservation-cnd</title>
 
     <link rel="stylesheet" href="x-tags.css">
-    <script src="x-tags-config.js?random=7"></script>
+    <script src="x-tags-config.js"></script>
     <script src="x-tags-event-listener.js"></script>
+
+    <style>
+        .bg-banner-cover {
+            display: block;
+            height: 0;
+            padding-top: 500px;
+            background-color: #f9f9f9;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .effect div {
+            width: 100px;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .low-rate .found::before {
+            content: 'Wow, only ';
+        }
+
+        .low-rate .found::after {
+            content: 'if you act now now now!!';
+        }
+
+        .low-rate .not-found::before {
+            content: '404!!';
+        }
+
+        .percentage::after {
+            content: '%';
+        }
+
+        *[data-content="number_of_beds"] {
+            visibility: hidden;
+            width: 0px;
+            overflow: visible;
+        }
+
+        *[data-content="number_of_beds"]::before {
+            visibility: visible;
+            content: 'Beds';
+        }
+    </style>
 
 
 </head>
 <body>
 
-<table width="100%" border="1">
-    <tr>
-        <td width="50%" valign="top">
 
-            <x-search types='["villa"]'></x-search>
-            <x-map></x-map>
+<!--<div class="low-rate">
+    <x-rate io=2054 type="villa" want="min">
+        Please inquire.
+    </x-rate>
+</div>
 
-        </td>
-        <td valign="top" id="results-area">
-            <x-bookables types='["villa"]'
-                         auto-load=true
-                         meta="eur,usd,bedrooms"
-                         tag-specs="div.items-container,div.item row,p.soldout|div.item-carousel,h1,h2,div.hidden&div.item-carousel,div.item-slick&div.meta,span,span&button.hidden"
-                         class=""
-            ></x-bookables>
-        </td>
-    </tr>
-</table>
+<x-rates io=20354 type="villa">
+    Please inquire.
+</x-rates>-->
+
+<!--<x-meta-data show="usd"></x-meta-data>-->
+
+<!--
+<x-image
+        src="http://lacuredata.test/shots/{type}/{io}"
+        in-background="true"
+        tag-specs="div.bg-banner-cover"
+></x-image>
+-->
+
+<!--<x-calendar columns=2></x-calendar>-->
+<!--<button onclick='tagApp.commands.filter("usd","min", 90)'>$90 and more...</button>
+<button onclick='tagApp.commands.filter("usd","max", 1000)'>$1000 or less...</button>
+<button onclick='tagApp.commands.unfilter("usd","min")'>go lower</button>-->
+
+<!--<button onclick="tagApp.commands.endSession()">clear session</button>-->
+<!--<x-bookables types='["villa"]' auto-load=true meta="eur,usd,bedrooms"
+tag-specs="div.items-container,div.item row,p.soldout|div.item-carousel,h1,h2,div.hidden&div.item-carousel,div.item-slick&div.meta,span,span&button.hidden"
+></x-bookables>-->
+
+<x-map></x-map>
+<x-bookables
+        types='["villa"]'
+        auto-load=true
+        meta="eur,usd,bedrooms"
+        paginator="2"
+        page-controls='{"prev": "Back","next": "Next" }'
+></x-bookables>
 
 
-<script src="//reservation-cdn.thebackoffice.io/app.js"></script>
+<!--<x-text-html src="http://lacuredata.test/info/{type}/{io}" io="1011" type="villa"></x-text-html>
+
+<x-text-html src="http://lacuredata.test/info/{type}/{io}" tag-specs="div,span.percentage" io="1011" type="villa" property="tax_rate"></x-text-html>
+
+<x-calendar columns=2 io=1011 type="villa"></x-calendar>-->
+<!--
+<x-focus io=1237 type="villa">1237</x-focus>
+<x-focus io=7286 type="villa">7286</x-focus>
+-->
+
+<!---->
+
+<!--<x-paginate
+        types='["villa"]'
+        name="smith"
+></x-paginate>-->
+
+<!--<x-focus io=20583 type="villa">20583</x-focus>
+<x-search></x-search>
+
+<x-map></x-map>
+
+<x-calendar columns="2"></x-calendar>
+
+<x-bookables
+        types='["villa"]'
+        auto-load=true
+        meta="eur,usd,bedrooms"
+></x-bookables>-->
+
+<!--
+<x-focus io=20585 type="villa">20585</x-focus>
+<x-focus io=20434 type="villa">20434</x-focus>
+<x-focus io=20430 type="villa">20430</x-focus>
+<hr/>
+<x-text-html src="https://admin.lacuredata.com/info/{type}/{io}" property="name"></x-text-html>
+-->
+
+<!--<script>
+    function wishlistToggle(el) {
+        let io = $(el).parent().data('io');
+        console.log(io)
+    }
+</script>-->
+
+<!--<x-rates>
+    <a href="contact.html">Enquire for Rates</a>
+</x-rates>
+
+<x-text-html src="http://lacuredata.test/info/{type}/{io}" property="tax_rate"></x-text-html>
+<x-meta-data details="usd,eur"></x-meta-data>-->
+
+<!--
+<x-rate io=20354 type="villa">
+    Please inquire.
+</x-rate>
+<x-text-html src="http://lacuredata.test/info/{type}/{io}/name" property="name"></x-text-html>
+<x-type-ahead src="http://LacureData.test/api/search/type-ahead"></x-type-ahead>
+<hr/>
+<x-rates columns='{"amount":"Rate","dates":"Dates","label":"Description","minStay":"Min Stay","note":"Notes"}'>
+    <a href="contact.html">Enquire for Rates</a>
+</x-rates>
+<hr/>
+
+<x-text-html src="http://lacuredata.test/info/{type}/{io}/{property}"></x-text-html>
+<x-text-html src="http://lacuredata.test/info/{type}/{io}/{property}" property="description"></x-text-html>
+<x-segments filter="Bedrooms" columns='{"title":"Title","number_of_beds":"# of Beds","bed":"sizes","description":"Description"}'></x-segments>
+<x-calendar></x-calendar>
+<x-focus io=1237 type="villa">1237</x-focus>
+<x-focus io=7286 type="villa">7286</x-focus>
+<x-images></x-images>
+<x-segments filter="Bedrooms" columns='{"title":"Title","number_of_beds":"# of Beds","bed":"sizes","description":"Description"}'></x-segments>
+<x-image></x-image>
+<x-features type="villa" io=415 filter="Chamber#amenity_%"></x-features>
+<x-features type="villa" io=415 filter="Chamber#service_%"></x-features>
+<x-features type="villa" io=415 filter="Chamber#location%"></x-features>
+<x-features filter="Chamber#"></x-features>
+<x-features filter="Chamber#service_%"></x-features>
+<x-map type="villa" io=416></x-map>
+<x-map pin='{"lat":18.424157, "lng": -77.153461, "title": "Ralphs" }'></x-map>
+<x-map pins='[{"lat":18.424157, "lng": -77.153461, "title": "Ralphs" }, {"lat":18.424257, "lng": -77.753461, "title": "Jacks" }]'></x-map>
+<x-map pin='{"lat":18.424157, "lng": -77.153461, "title": "Ralphs" }'></x-map>
+<x-map pins='[{"lat":18.424157, "lng": -77.153461, "title": "Ralphs" }, {"lat":18.424257, "lng": -77.753461, "title": "Jacks" }]'></x-map>
+<x-features type="villa" io=415 filter="Chamber#amenity_%"></x-features>
+<x-features filter="Chamber#amenity_%"></x-features>
+<x-rates></x-rates>
+<x-map io=416 type="villa"></x-map>
+<x-images></x-images>
+<x-text-html io=415 type="villa" property="description"></x-text-html>
+<x-text-html property="description"></x-text-html>
+<x-map></x-map>
+<x-map pin='{"lat":18.424157, "lng": -77.153461, "name": "Ralphs" }'></x-map>
+<x-text locator="Bookable.title"></x-text>
+<x-rates><a href="contact.html">Enquire for Rates</a></x-rates>
+-->
+
+
 </body>
 </html>
