@@ -72,10 +72,54 @@
             content: 'Beds';
         }
 
-        .vue-map{
+        .vue-map {
             height: 100%;
             width: 100%;
         }
+
+        .paginate-list {
+            width: 159px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .paginate-lis li {
+            display: block;
+        }
+
+        .paginate-lis li:before {
+            content: '⚬ ';
+            font-weight: bold;
+            color: slategray;
+        }
+
+        .paginate-links.items {
+            user-select: none;
+        }
+
+        .paginate-links.items a {
+            cursor: pointer;
+        }
+
+        .paginate-links.items li.active a {
+            font-weight: bold;
+        }
+
+        .paginate-links.items li.next:before {
+            content: ' | ';
+            margin-right: 13px;
+            color: #ddd;
+        }
+
+        .paginate-links.items li.disabled a {
+            color: #ccc;
+            cursor: no-drop;
+        }
+
+        a {
+            color: #42b983;
+        }
+
     </style>
 
 
